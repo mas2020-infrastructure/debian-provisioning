@@ -7,7 +7,7 @@ fi
 
 # Inserimento aliasing
 printf "\n${ACTIVITY}Set vm with aliases and base packages...$STOP_COLOR\n"
-echo "alias cl='clear'" > .bash_aliases
+echo "alias cl='clear'" > ${HOME}/.bash_aliases
 
 printf "\n${ACTIVITY}Updating & upgrading packages...$STOP_COLOR\n"
 sudo apt-get update 2>&1 | tee -a $HOME/set-vm.log && sudo apt-get upgrade -y 2>&1 | tee -a $HOME/set-vm.log
