@@ -3,6 +3,11 @@
 # Parameters:
 # $1 argument represents the docker-compose version to install (e.g. 1.29.1)
 # $2 represent to user to attach the docker group
+if [ -f $(dirname "$0")/source.sh ]; then
+  source $(dirname "$0")/source.sh
+else
+  printf "$SUB_ACT%s$STOP_COLOR\n" "source.sh not loaded, check to have the file in the same path as the sh script"
+fi
 
 printf "\e[1;33m==> Install last version of docker and docker-compose...\e[0m\n"
 

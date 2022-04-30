@@ -1,3 +1,9 @@
+if [ -f $(dirname "$0")/source.sh ]; then
+  source $(dirname "$0")/source.sh
+else
+  printf "$SUB_ACT%s$STOP_COLOR\n" "source.sh not loaded, check to have the file in the same path as the sh script"
+fi
+
 # $1 argument represents the version of the Virtual Box Guest Addition to install
 printf "\n\e[1;33m==> Installing guest additions $1...\e[0m\n"
 # check parameter

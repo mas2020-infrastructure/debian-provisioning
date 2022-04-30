@@ -8,9 +8,8 @@
 # source file is we are in the right execution folder
 if [ -f $(dirname "$0")/source.sh ]; then
   source $(dirname "$0")/source.sh
-  echo "ok"
 else
-  printf "$SUB_ACT%s$STOP_COLOR\n" "source.sh not loaded, check to have the file in the same path as install-zsh.sh"
+  printf "$SUB_ACT%s$STOP_COLOR\n" "source.sh not loaded, check to have the file in the same path as the sh script"
 fi
 
 # Start point

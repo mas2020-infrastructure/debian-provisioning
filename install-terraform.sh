@@ -1,6 +1,8 @@
 # source file is we are in the right execution folder
-if [ -f "debian-provisioning/source.sh" ]; then
-    source debian-provisioning/source.sh
+if [ -f $(dirname "$0")/source.sh ]; then
+  source $(dirname "$0")/source.sh
+else
+  printf "$SUB_ACT%s$STOP_COLOR\n" "source.sh not loaded, check to have the file in the same path as the sh script"
 fi
 
 # Parameters:
